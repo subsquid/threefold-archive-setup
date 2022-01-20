@@ -1,0 +1,74 @@
+replicaCount: 1
+
+# image:
+#   repository:
+#   pullPolicy: Always
+#   # Overrides the image tag whose default is the chart appVersion.
+#   tag: ""
+
+imagePullSecrets: []
+
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext:
+  {}
+  # fsGroup: 2000
+
+securityContext:
+  {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+volume:
+  size: 25Gi
+  existingpersistentVolumeClaim: ""
+  persistentVolume:
+    create: true
+    hostPath: "/mnt/data/tfchainindexer"
+
+global:
+  ingress:
+    certresolver: le
+
+service:
+  type: ClusterIP
+  port: 4010
+
+ingress:
+  enabled: true
+  annotations:
+  hosts:
+    - host: mainindexer1.grid.tf
+      paths:
+        - /
+
+ws_endpoint: wss://tfchain.grid.tf
+db_endpoint: db
+indexer_status_service_url: http://indexer-status-service:8081/status
+
+resources: {}
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
