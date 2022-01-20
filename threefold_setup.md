@@ -16,6 +16,16 @@ Install polkadot js extension: https://polkadot.js.org/extension/
 
 Indentify which network you want to use. In this guide we will use `Devnet`.
 
+!!! DON'T RUN INDEXERS ON DEVNET FOR OTHER PURPOSES THAN TESTING !!!
+
+If you want to deploy on testnet or mainnet you will need to buy TFT in order to pay for your deployments:
+
+TFT is available on:
+
+- [Liquid Exchange](https://app.liquid.com/exchange/TFTUSDT)
+- [pancakeswap](https://pancakeswap.finance/swap?exactField=output&exactAmount=100&outputCurrency=0x8f0FB159380176D324542b3a7933F0C2Fd0c2bbf&inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56?use=v2)
+- [GET TFT Website](https://threefold.io/tft/#gettft)
+
 ## Step 3
 
 Browse to https://portal.dev.grid.tf. Do the following things:
