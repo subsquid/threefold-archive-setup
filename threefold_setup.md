@@ -78,7 +78,12 @@ If everything went well, you should see a screen containing the details of your 
 If you have the public IP you need to SSH to your cluster and copy the kubeconfig file to your host:
 
 ```
-scp root@185.206.122.38:.kube/config config.yaml
+scp root@your_public_ip:.kube/config config.yaml
+```
+
+Open the `config.yaml` file in any editor and change the `server:` field to your public ip from your cluster. (Leave the port as it is)
+
+```
 export KUBECONFIG=~config.yaml
 kubectl get pods
 ```
