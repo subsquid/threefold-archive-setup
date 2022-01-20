@@ -33,7 +33,7 @@ Browse to https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftfchain.dev.grid.tf%2Fws
 
 ## Step 5
 
-You now have an account, you have tokens, time te deploy!!
+You now have an account, you have tokens, time to deploy!!
 
 Browse to https://play.grid.tf
 
@@ -41,7 +41,7 @@ Click on the right top account icon.
 
 Click on create profile mananger and choose a password:
 
-[profile](./img/create_profile.png)
+![profile](./img/create_profile.png)
 
 Next step:
 
@@ -50,7 +50,7 @@ Next step:
 - Fill in the mnemonic (words) that you generated with your polkadot account
 - Fill in your public SSH key (this will be default for all deployments)
 
-[profile2](./img/create_profile2.png)
+![profile2](./img/create_profile2.png)
 
 Click the green `Activate` button. Now you are ready to deploy.
 
@@ -62,7 +62,7 @@ Now in this example we will deploy a single master kubernetes:
 
 Select `Master` tab on the Kubernetes page:
 
-[kubernetes](./img/kubernetes_create.png). 
+![kubernetes](./img/kubernetes_create.png). 
 
 Use following values:
 
@@ -78,18 +78,11 @@ If everything went well, you should see a screen containing the details of your 
 If you have the public IP you need to SSH to your cluster and copy the kubeconfig file to your host:
 
 ```
-ssh root@public_ip
-cat .kube/config
-```
--> copy output
-On your host:
-```
-vim kubeconfig.yaml
--> paste output
-export KUBECONFIG=$PATH_TO_FILE
+scp root@185.206.122.38:.kube/config config.yaml
+export KUBECONFIG=~config.yaml
 kubectl get pods
 ```
 
-should give the out: `no pods in default namespace`.
+should give the output: `no pods in default namespace`.
 
 You are now ready to deploy your Indexer!
