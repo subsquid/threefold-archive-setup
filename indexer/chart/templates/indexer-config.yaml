@@ -1,64 +1,160 @@
 apiVersion: v1
 data:
-  typesBundle.json: "{\r\n  \"spec\": {\r\n    \"polkadot\": [\r\n      {\r\n        \"minmax\":
-    [\r\n          0,\r\n          12\r\n        ],\r\n        \"types\": {\r\n          \"CompactAssignments\":
+  typesBundle.json: "{\r\n  \"spec\": {\r\n    \"kusama\": [\r\n      {\r\n        \"minmax\":
+    [\r\n          1019,\r\n          1031\r\n        ],\r\n        \"types\": {\r\n
+    \         \"AccountInfo\": \"AccountInfoWithRefCount\",\r\n          \"Address\":
+    \"LookupSource\",\r\n          \"CompactAssignments\": \"CompactAssignmentsTo257\",\r\n
+    \         \"RawSolution\": \"RawSolutionWith16\",\r\n          \"Keys\": \"SessionKeys5\",\r\n
+    \         \"LookupSource\": \"IndicesLookupSource\",\r\n          \"ValidatorPrefs\":
+    \"ValidatorPrefsWithCommission\",\r\n          \"BalanceLock\": \"BalanceLockTo212\",\r\n
+    \         \"DispatchError\": \"DispatchErrorTo198\",\r\n          \"DispatchInfo\":
+    \"DispatchInfoTo244\",\r\n          \"Heartbeat\": \"HeartbeatTo244\",\r\n          \"IdentityInfo\":
+    \"IdentityInfoTo198\",\r\n          \"Multiplier\": \"Fixed64\",\r\n          \"OpenTip\":
+    \"OpenTipTo225\",\r\n          \"RefCount\": \"RefCountTo259\",\r\n          \"ReferendumInfo\":
+    \"ReferendumInfoTo239\",\r\n          \"SlashingSpans\": \"SlashingSpansTo204\",\r\n
+    \         \"StakingLedger\": \"StakingLedgerTo223\",\r\n          \"Votes\": \"VotesTo230\",\r\n
+    \         \"Weight\": \"u32\"\r\n        }\r\n      },\r\n      {\r\n        \"minmax\":
+    [\r\n          1032,\r\n          1042\r\n        ],\r\n        \"types\": {\r\n
+    \         \"AccountInfo\": \"AccountInfoWithRefCount\",\r\n          \"Address\":
+    \"LookupSource\",\r\n          \"CompactAssignments\": \"CompactAssignmentsTo257\",\r\n
+    \         \"RawSolution\": \"RawSolutionWith16\",\r\n          \"Keys\": \"SessionKeys5\",\r\n
+    \         \"LookupSource\": \"IndicesLookupSource\",\r\n          \"ValidatorPrefs\":
+    \"ValidatorPrefsWithCommission\",\r\n          \"BalanceLock\": \"BalanceLockTo212\",\r\n
+    \         \"DispatchInfo\": \"DispatchInfoTo244\",\r\n          \"Heartbeat\":
+    \"HeartbeatTo244\",\r\n          \"Multiplier\": \"Fixed64\",\r\n          \"OpenTip\":
+    \"OpenTipTo225\",\r\n          \"RefCount\": \"RefCountTo259\",\r\n          \"ReferendumInfo\":
+    \"ReferendumInfoTo239\",\r\n          \"SlashingSpans\": \"SlashingSpansTo204\",\r\n
+    \         \"StakingLedger\": \"StakingLedgerTo223\",\r\n          \"Votes\": \"VotesTo230\",\r\n
+    \         \"Weight\": \"u32\"\r\n        }\r\n      },\r\n      {\r\n        \"minmax\":
+    [\r\n          1043,\r\n          1045\r\n        ],\r\n        \"types\": {\r\n
+    \         \"AccountInfo\": \"AccountInfoWithRefCount\",\r\n          \"Address\":
+    \"LookupSource\",\r\n          \"CompactAssignments\": \"CompactAssignmentsTo257\",\r\n
+    \         \"RawSolution\": \"RawSolutionWith16\",\r\n          \"Keys\": \"SessionKeys5\",\r\n
+    \         \"LookupSource\": \"IndicesLookupSource\",\r\n          \"ValidatorPrefs\":
+    \"ValidatorPrefsWithCommission\",\r\n          \"BalanceLock\": \"BalanceLockTo212\",\r\n
+    \         \"DispatchInfo\": \"DispatchInfoTo244\",\r\n          \"Heartbeat\":
+    \"HeartbeatTo244\",\r\n          \"Multiplier\": \"Fixed64\",\r\n          \"OpenTip\":
+    \"OpenTipTo225\",\r\n          \"RefCount\": \"RefCountTo259\",\r\n          \"ReferendumInfo\":
+    \"ReferendumInfoTo239\",\r\n          \"StakingLedger\": \"StakingLedgerTo223\",\r\n
+    \         \"Votes\": \"VotesTo230\",\r\n          \"Weight\": \"u32\"\r\n        }\r\n
+    \     },\r\n      {\r\n        \"minmax\": [\r\n          1046,\r\n          1054\r\n
+    \       ],\r\n        \"types\": {\r\n          \"CompactAssignments\": \"CompactAssignmentsTo257\",\r\n
+    \         \"RawSolution\": \"RawSolutionWith16\",\r\n          \"Keys\": \"SessionKeys5\",\r\n
+    \         \"ProxyType\": {\r\n            \"_enum\": [\r\n              \"Any\",\r\n
+    \             \"NonTransfer\",\r\n              \"Governance\",\r\n              \"Staking\",\r\n
+    \             \"IdentityJudgement\",\r\n              \"CancelProxy\",\r\n              \"Auction\"\r\n
+    \           ]\r\n          },\r\n          \"AccountInfo\": \"AccountInfoWithRefCount\",\r\n
+    \         \"Address\": \"AccountId\",\r\n          \"LookupSource\": \"AccountId\",\r\n
+    \         \"ValidatorPrefs\": \"ValidatorPrefsWithCommission\",\r\n          \"DispatchInfo\":
+    \"DispatchInfoTo244\",\r\n          \"Heartbeat\": \"HeartbeatTo244\",\r\n          \"Multiplier\":
+    \"Fixed64\",\r\n          \"OpenTip\": \"OpenTipTo225\",\r\n          \"RefCount\":
+    \"RefCountTo259\",\r\n          \"ReferendumInfo\": \"ReferendumInfoTo239\",\r\n
+    \         \"StakingLedger\": \"StakingLedgerTo240\",\r\n          \"Weight\":
+    \"u32\"\r\n        }\r\n      },\r\n      {\r\n        \"minmax\": [\r\n          1055,\r\n
+    \         1056\r\n        ],\r\n        \"types\": {\r\n          \"CompactAssignments\":
     \"CompactAssignmentsTo257\",\r\n          \"RawSolution\": \"RawSolutionWith16\",\r\n
     \         \"Keys\": \"SessionKeys5\",\r\n          \"ProxyType\": {\r\n            \"_enum\":
-    {\r\n              \"Any\": 0,\r\n              \"NonTransfer\": 1,\r\n              \"Governance\":
-    2,\r\n              \"Staking\": 3,\r\n              \"UnusedSudoBalances\": 4,\r\n
-    \             \"IdentityJudgement\": 5,\r\n              \"CancelProxy\": 6,\r\n
-    \             \"Auction\": 7\r\n            }\r\n          },\r\n          \"AccountInfo\":
+    [\r\n              \"Any\",\r\n              \"NonTransfer\",\r\n              \"Governance\",\r\n
+    \             \"Staking\",\r\n              \"IdentityJudgement\",\r\n              \"CancelProxy\",\r\n
+    \             \"Auction\"\r\n            ]\r\n          },\r\n          \"AccountInfo\":
     \"AccountInfoWithRefCount\",\r\n          \"Address\": \"AccountId\",\r\n          \"LookupSource\":
     \"AccountId\",\r\n          \"ValidatorPrefs\": \"ValidatorPrefsWithCommission\",\r\n
-    \         \"OpenTip\": \"OpenTipTo225\",\r\n          \"RefCount\": \"RefCountTo259\"\r\n
-    \       }\r\n      },\r\n      {\r\n        \"minmax\": [\r\n          13,\r\n
-    \         22\r\n        ],\r\n        \"types\": {\r\n          \"CompactAssignments\":
-    \"CompactAssignmentsTo257\",\r\n          \"RawSolution\": \"RawSolutionWith16\",\r\n
-    \         \"Keys\": \"SessionKeys5\",\r\n          \"ProxyType\": {\r\n            \"_enum\":
-    {\r\n              \"Any\": 0,\r\n              \"NonTransfer\": 1,\r\n              \"Governance\":
-    2,\r\n              \"Staking\": 3,\r\n              \"UnusedSudoBalances\": 4,\r\n
-    \             \"IdentityJudgement\": 5,\r\n              \"CancelProxy\": 6,\r\n
-    \             \"Auction\": 7\r\n            }\r\n          },\r\n          \"AccountInfo\":
-    \"AccountInfoWithRefCount\",\r\n          \"Address\": \"AccountId\",\r\n          \"LookupSource\":
-    \"AccountId\",\r\n          \"ValidatorPrefs\": \"ValidatorPrefsWithCommission\",\r\n
-    \         \"RefCount\": \"RefCountTo259\"\r\n        }\r\n      },\r\n      {\r\n
-    \       \"minmax\": [\r\n          23,\r\n          24\r\n        ],\r\n        \"types\":
-    {\r\n          \"CompactAssignments\": \"CompactAssignmentsWith16\",\r\n          \"RawSolution\":
-    \"RawSolutionWith16\",\r\n          \"Keys\": \"SessionKeys5\",\r\n          \"ProxyType\":
-    {\r\n            \"_enum\": {\r\n              \"Any\": 0,\r\n              \"NonTransfer\":
-    1,\r\n              \"Governance\": 2,\r\n              \"Staking\": 3,\r\n              \"UnusedSudoBalances\":
-    4,\r\n              \"IdentityJudgement\": 5,\r\n              \"CancelProxy\":
-    6,\r\n              \"Auction\": 7\r\n            }\r\n          },\r\n          \"AccountInfo\":
-    \"AccountInfoWithRefCount\",\r\n          \"Address\": \"AccountId\",\r\n          \"LookupSource\":
-    \"AccountId\",\r\n          \"ValidatorPrefs\": \"ValidatorPrefsWithCommission\",\r\n
-    \         \"RefCount\": \"RefCountTo259\"\r\n        }\r\n      },\r\n      {\r\n
-    \       \"minmax\": [\r\n          25,\r\n          27\r\n        ],\r\n        \"types\":
-    {\r\n          \"CompactAssignments\": \"CompactAssignmentsWith16\",\r\n          \"RawSolution\":
-    \"RawSolutionWith16\",\r\n          \"Keys\": \"SessionKeys5\",\r\n          \"ProxyType\":
-    {\r\n            \"_enum\": {\r\n              \"Any\": 0,\r\n              \"NonTransfer\":
-    1,\r\n              \"Governance\": 2,\r\n              \"Staking\": 3,\r\n              \"UnusedSudoBalances\":
-    4,\r\n              \"IdentityJudgement\": 5,\r\n              \"CancelProxy\":
-    6,\r\n              \"Auction\": 7\r\n            }\r\n          },\r\n          \"AccountInfo\":
-    \"AccountInfoWithRefCount\",\r\n          \"Address\": \"AccountId\",\r\n          \"LookupSource\":
-    \"AccountId\",\r\n          \"ValidatorPrefs\": \"ValidatorPrefsWithCommission\"\r\n
-    \       }\r\n      },\r\n      {\r\n        \"minmax\": [\r\n          28,\r\n
-    \         29\r\n        ],\r\n        \"types\": {\r\n          \"CompactAssignments\":
+    \         \"DispatchInfo\": \"DispatchInfoTo244\",\r\n          \"Heartbeat\":
+    \"HeartbeatTo244\",\r\n          \"Multiplier\": \"Fixed64\",\r\n          \"OpenTip\":
+    \"OpenTipTo225\",\r\n          \"RefCount\": \"RefCountTo259\",\r\n          \"StakingLedger\":
+    \"StakingLedgerTo240\",\r\n          \"Weight\": \"u32\"\r\n        }\r\n      },\r\n
+    \     {\r\n        \"minmax\": [\r\n          1057,\r\n          1061\r\n        ],\r\n
+    \       \"types\": {\r\n          \"CompactAssignments\": \"CompactAssignmentsTo257\",\r\n
+    \         \"RawSolution\": \"RawSolutionWith16\",\r\n          \"Keys\": \"SessionKeys5\",\r\n
+    \         \"ProxyType\": {\r\n            \"_enum\": [\r\n              \"Any\",\r\n
+    \             \"NonTransfer\",\r\n              \"Governance\",\r\n              \"Staking\",\r\n
+    \             \"IdentityJudgement\",\r\n              \"CancelProxy\",\r\n              \"Auction\"\r\n
+    \           ]\r\n          },\r\n          \"AccountInfo\": \"AccountInfoWithRefCount\",\r\n
+    \         \"Address\": \"AccountId\",\r\n          \"LookupSource\": \"AccountId\",\r\n
+    \         \"ValidatorPrefs\": \"ValidatorPrefsWithCommission\",\r\n          \"DispatchInfo\":
+    \"DispatchInfoTo244\",\r\n          \"Heartbeat\": \"HeartbeatTo244\",\r\n          \"OpenTip\":
+    \"OpenTipTo225\",\r\n          \"RefCount\": \"RefCountTo259\"\r\n        }\r\n
+    \     },\r\n      {\r\n        \"minmax\": [\r\n          1062,\r\n          2012\r\n
+    \       ],\r\n        \"types\": {\r\n          \"CompactAssignments\": \"CompactAssignmentsTo257\",\r\n
+    \         \"RawSolution\": \"RawSolutionWith16\",\r\n          \"Keys\": \"SessionKeys5\",\r\n
+    \         \"ProxyType\": {\r\n            \"_enum\": [\r\n              \"Any\",\r\n
+    \             \"NonTransfer\",\r\n              \"Governance\",\r\n              \"Staking\",\r\n
+    \             \"IdentityJudgement\",\r\n              \"CancelProxy\",\r\n              \"Auction\"\r\n
+    \           ]\r\n          },\r\n          \"AccountInfo\": \"AccountInfoWithRefCount\",\r\n
+    \         \"Address\": \"AccountId\",\r\n          \"LookupSource\": \"AccountId\",\r\n
+    \         \"ValidatorPrefs\": \"ValidatorPrefsWithCommission\",\r\n          \"OpenTip\":
+    \"OpenTipTo225\",\r\n          \"RefCount\": \"RefCountTo259\"\r\n        }\r\n
+    \     },\r\n      {\r\n        \"minmax\": [\r\n          2013,\r\n          2022\r\n
+    \       ],\r\n        \"types\": {\r\n          \"CompactAssignments\": \"CompactAssignmentsTo257\",\r\n
+    \         \"RawSolution\": \"RawSolutionWith16\",\r\n          \"Keys\": \"SessionKeys5\",\r\n
+    \         \"ProxyType\": {\r\n            \"_enum\": [\r\n              \"Any\",\r\n
+    \             \"NonTransfer\",\r\n              \"Governance\",\r\n              \"Staking\",\r\n
+    \             \"IdentityJudgement\",\r\n              \"CancelProxy\",\r\n              \"Auction\"\r\n
+    \           ]\r\n          },\r\n          \"AccountInfo\": \"AccountInfoWithRefCount\",\r\n
+    \         \"Address\": \"AccountId\",\r\n          \"LookupSource\": \"AccountId\",\r\n
+    \         \"ValidatorPrefs\": \"ValidatorPrefsWithCommission\",\r\n          \"RefCount\":
+    \"RefCountTo259\"\r\n        }\r\n      },\r\n      {\r\n        \"minmax\": [\r\n
+    \         2023,\r\n          2024\r\n        ],\r\n        \"types\": {\r\n          \"CompactAssignments\":
     \"CompactAssignmentsWith16\",\r\n          \"RawSolution\": \"RawSolutionWith16\",\r\n
-    \         \"Keys\": \"SessionKeys6\",\r\n          \"ProxyType\": {\r\n            \"_enum\":
-    {\r\n              \"Any\": 0,\r\n              \"NonTransfer\": 1,\r\n              \"Governance\":
-    2,\r\n              \"Staking\": 3,\r\n              \"UnusedSudoBalances\": 4,\r\n
-    \             \"IdentityJudgement\": 5,\r\n              \"CancelProxy\": 6,\r\n
-    \             \"Auction\": 7\r\n            }\r\n          },\r\n          \"AccountInfo\":
-    \"AccountInfoWithDualRefCount\"\r\n        }\r\n      },\r\n      {\r\n        \"minmax\":
-    [\r\n          30,\r\n          9109\r\n        ],\r\n        \"types\": {\r\n
+    \         \"Keys\": \"SessionKeys5\",\r\n          \"ProxyType\": {\r\n            \"_enum\":
+    [\r\n              \"Any\",\r\n              \"NonTransfer\",\r\n              \"Governance\",\r\n
+    \             \"Staking\",\r\n              \"IdentityJudgement\",\r\n              \"CancelProxy\",\r\n
+    \             \"Auction\"\r\n            ]\r\n          },\r\n          \"AccountInfo\":
+    \"AccountInfoWithRefCount\",\r\n          \"Address\": \"AccountId\",\r\n          \"LookupSource\":
+    \"AccountId\",\r\n          \"ValidatorPrefs\": \"ValidatorPrefsWithCommission\",\r\n
+    \         \"RefCount\": \"RefCountTo259\"\r\n        }\r\n      },\r\n      {\r\n
+    \       \"minmax\": [\r\n          2025,\r\n          2027\r\n        ],\r\n        \"types\":
+    {\r\n          \"CompactAssignments\": \"CompactAssignmentsWith16\",\r\n          \"RawSolution\":
+    \"RawSolutionWith16\",\r\n          \"Keys\": \"SessionKeys5\",\r\n          \"ProxyType\":
+    {\r\n            \"_enum\": [\r\n              \"Any\",\r\n              \"NonTransfer\",\r\n
+    \             \"Governance\",\r\n              \"Staking\",\r\n              \"IdentityJudgement\",\r\n
+    \             \"CancelProxy\",\r\n              \"Auction\"\r\n            ]\r\n
+    \         },\r\n          \"AccountInfo\": \"AccountInfoWithRefCount\",\r\n          \"Address\":
+    \"AccountId\",\r\n          \"LookupSource\": \"AccountId\",\r\n          \"ValidatorPrefs\":
+    \"ValidatorPrefsWithCommission\"\r\n        }\r\n      },\r\n      {\r\n        \"minmax\":
+    [\r\n          2028,\r\n          2029\r\n        ],\r\n        \"types\": {\r\n
     \         \"CompactAssignments\": \"CompactAssignmentsWith16\",\r\n          \"RawSolution\":
     \"RawSolutionWith16\",\r\n          \"Keys\": \"SessionKeys6\",\r\n          \"ProxyType\":
-    {\r\n            \"_enum\": {\r\n              \"Any\": 0,\r\n              \"NonTransfer\":
-    1,\r\n              \"Governance\": 2,\r\n              \"Staking\": 3,\r\n              \"UnusedSudoBalances\":
-    4,\r\n              \"IdentityJudgement\": 5,\r\n              \"CancelProxy\":
-    6,\r\n              \"Auction\": 7\r\n            }\r\n          }\r\n        }\r\n
-    \     },\r\n      {\r\n        \"minmax\": [\r\n          9110,\r\n          null\r\n
-    \       ],\r\n        \"types\": {}\r\n      }\r\n    ]\r\n  }\r\n}"
+    {\r\n            \"_enum\": [\r\n              \"Any\",\r\n              \"NonTransfer\",\r\n
+    \             \"Governance\",\r\n              \"Staking\",\r\n              \"IdentityJudgement\",\r\n
+    \             \"CancelProxy\",\r\n              \"Auction\"\r\n            ]\r\n
+    \         },\r\n          \"AccountInfo\": \"AccountInfoWithDualRefCount\"\r\n
+    \       }\r\n      },\r\n      {\r\n        \"minmax\": [\r\n          2030,\r\n
+    \         9000\r\n        ],\r\n        \"types\": {\r\n          \"CompactAssignments\":
+    \"CompactAssignmentsWith16\",\r\n          \"RawSolution\": \"RawSolutionWith16\",\r\n
+    \         \"Keys\": \"SessionKeys6\",\r\n          \"ProxyType\": {\r\n            \"_enum\":
+    [\r\n              \"Any\",\r\n              \"NonTransfer\",\r\n              \"Governance\",\r\n
+    \             \"Staking\",\r\n              \"IdentityJudgement\",\r\n              \"CancelProxy\",\r\n
+    \             \"Auction\"\r\n            ]\r\n          }\r\n        }\r\n      },\r\n
+    \     {\r\n        \"minmax\": [\r\n          9010,\r\n          9099\r\n        ],\r\n
+    \       \"types\": {\r\n          \"CompactAssignments\": \"CompactAssignmentsWith24\",\r\n
+    \         \"RawSolution\": \"RawSolutionWith24\",\r\n          \"Keys\": \"SessionKeys6\",\r\n
+    \         \"ProxyType\": {\r\n            \"_enum\": [\r\n              \"Any\",\r\n
+    \             \"NonTransfer\",\r\n              \"Governance\",\r\n              \"Staking\",\r\n
+    \             \"IdentityJudgement\",\r\n              \"CancelProxy\",\r\n              \"Auction\"\r\n
+    \           ]\r\n          },\r\n          \"AssetInstance\": \"AssetInstanceV0\",\r\n
+    \         \"Fungibility\": \"FungibilityV0\",\r\n          \"Junction\": \"JunctionV0\",\r\n
+    \         \"Junctions\": \"JunctionsV0\",\r\n          \"MultiAsset\": \"MultiAssetV0\",\r\n
+    \         \"MultiAssetFilter\": \"MultiAssetFilterV0\",\r\n          \"MultiLocation\":
+    \"MultiLocationV0\",\r\n          \"Response\": \"ResponseV0\",\r\n          \"WildFungibility\":
+    \"WildFungibilityV0\",\r\n          \"WildMultiAsset\": \"WildMultiAssetV0\",\r\n
+    \         \"Xcm\": \"XcmV0\",\r\n          \"XcmError\": \"XcmErrorV0\",\r\n          \"XcmOrder\":
+    \"XcmOrderV0\"\r\n        }\r\n      },\r\n      {\r\n        \"minmax\": [\r\n
+    \         9100,\r\n          9105\r\n        ],\r\n        \"types\": {\r\n          \"CompactAssignments\":
+    \"CompactAssignmentsWith24\",\r\n          \"RawSolution\": \"RawSolutionWith24\",\r\n
+    \         \"Keys\": \"SessionKeys6\",\r\n          \"ProxyType\": {\r\n            \"_enum\":
+    [\r\n              \"Any\",\r\n              \"NonTransfer\",\r\n              \"Governance\",\r\n
+    \             \"Staking\",\r\n              \"IdentityJudgement\",\r\n              \"CancelProxy\",\r\n
+    \             \"Auction\"\r\n            ]\r\n          },\r\n          \"AssetInstance\":
+    \"AssetInstanceV1\",\r\n          \"Fungibility\": \"FungibilityV1\",\r\n          \"Junction\":
+    \"JunctionV1\",\r\n          \"Junctions\": \"JunctionsV1\",\r\n          \"MultiAsset\":
+    \"MultiAssetV1\",\r\n          \"MultiAssetFilter\": \"MultiAssetFilterV1\",\r\n
+    \         \"MultiLocation\": \"MultiLocationV1\",\r\n          \"Response\": \"ResponseV1\",\r\n
+    \         \"WildFungibility\": \"WildFungibilityV1\",\r\n          \"WildMultiAsset\":
+    \"WildMultiAssetV1\",\r\n          \"Xcm\": \"XcmV1\",\r\n          \"XcmError\":
+    \"XcmErrorV1\",\r\n          \"XcmOrder\": \"XcmOrderV1\"\r\n        }\r\n      },\r\n
+    \     {\r\n        \"minmax\": [\r\n          9106,\r\n          null\r\n        ],\r\n
+    \       \"types\": {}\r\n      }\r\n    ]\r\n  }\r\n}"
 kind: ConfigMap
 metadata:
   creationTimestamp: null

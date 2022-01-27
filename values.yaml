@@ -50,11 +50,12 @@ ingress:
   enabled: true
   annotations:
   hosts:
-    - host: mainindexer1.grid.tf
+    - host: 
       paths:
-        - /
+        - /console
+        - /v1
 
-ws_endpoint: wss://tfchain.grid.tf
+ws_endpoint: wss://kusama-rpc.polkadot.io
 db_endpoint: db
 indexer_status_service_url: http://indexer-status-service:8081/status
 
