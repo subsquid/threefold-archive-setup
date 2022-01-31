@@ -55,7 +55,7 @@ ingress:
         - /console
         - /v1
 
-ws_endpoint: wss://kusama-rpc.polkadot.io
+ws_endpoint: #wss endpoint
 db_endpoint: db
 indexer_status_service_url: http://indexer-status-service:8081/status
 
