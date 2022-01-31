@@ -1,16 +1,23 @@
-# Hydra indexer chart for deployment on Threefold Kubernetes
+# Subsquid Archive setup for deployment on Threefold Kubernetes
 
 ## Prerequisites
 
-See [threefold_setup](./threefold_setup.md)
+* [kubectl](https://kubernetes.io/docs/reference/kubectl/kubectl/)
+* [helm](https://helm.sh/docs/intro/install/)
 
-## Installation
+## Threefold setup
+
+See [Threefold Setup](./threefold_setup.md)
+
+## Deployment
 
 ### Step 1
 
-First generate the types config map (based on the types of the chain you want to index)
+First, you need to generate the types config map (based on the types of the chain you want to index). You can use typesBundle.json or types.json from [here](https://github.com/subsquid/squid-archive-setup). 
 
-See: [readme](./indexer/readme.md)
+```sh
+kubectl create configmap indexer-config --from-file=./types.json --dry-run=client --output=yaml > archive/templates/indexer-config.yaml
+```
 
 ### Step 2
 
@@ -20,10 +27,6 @@ Connect to your Kubernetes giving the kubeconfig file:
 export KUBECONFIG=$PATH_TO_KUBE_CONFIG
 ```
 
-### Step 3
-
-Install helm: https://helm.sh/docs/intro/install/
-
 ### Step 4
 
 Modify `./values.yaml` to reflect which chain you want to index:
@@ -31,20 +34,6 @@ Modify `./values.yaml` to reflect which chain you want to index:
 ```
 ws_endpoint: websocket_endpoint(starts with wss://...)
 ```
-
-Set a host for your ingress (this will be the endpoint for you indexer-gateway):
-
-```
-ingress:
-  enabled: true
-  annotations:
-  hosts:
-    - host: somehost.com
-      paths:
-        - /
-```
-
-You will need to set an A record that set's the domain to your public ip of your cluster. You can get the public IP from previous kubernetes deployment step.
 
 By default Threefold kubernetes ingress is Traefik, Traefik has a certmanager enabled by default which can issue certificates with Let's Encrypt. Configuration is as following:
 
@@ -64,4 +53,4 @@ Install!
 helm install indexer ./indexer/chart -f values.yaml
 ```
 
-Your indexer should be running after a minute and you can browse to the host you set to see the indexer-gateway dashboard.
+Your indexer should be running after a minute. To see indexer-gateway dashboard go https://public_ip/console
