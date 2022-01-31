@@ -16,7 +16,7 @@ See [Threefold Setup](./threefold_setup.md)
 First, you need to generate the types config map (based on the types of the chain you want to index). You can use typesBundle.json or types.json from [here](https://github.com/subsquid/squid-archive-setup). 
 
 ```sh
-kubectl create configmap indexer-config --from-file=./types.json --dry-run=client --output=yaml > archive/templates/indexer-config.yaml
+kubectl create configmap indexer-config --from-file=./typesBundle.json --dry-run=client --output=yaml > archive/templates/indexer-config.yaml
 ```
 
 ### Step 2
